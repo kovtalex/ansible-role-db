@@ -52,3 +52,7 @@ before_install:
   - tar xvf secrets.tar
   - mv google_compute_engine /home/travis/.ssh/
   - chmod 0600 /home/travis/.ssh/google_compute_engine
+notifications:
+  slack:
+    rooms:
+      secure: jpXXVcYXh85mUhdgA8QdN3fX3WzkCsDnp6ZyUEH6oO/F4MOTyrCgrIHA0DmYqrk5Q9xf6M/qSTpaCUUFsEbI66dYZNWFtiv6e20JvK4czj/cMgYrxfxzwORDDHI0XN64n3e21pnRGJtCrx0kG5twwRENUmIIuUvDiF/DB45V1AtkZ+31fifk6L3GSM2nrk1pUT5WL/2BUKX6qVdpCnD4OJplVg4e1vlU7bvK5tP/kNK6KSBgtnjhvqY8S3vOrYKEeU2wUJChzxlT25Eul3ryCjQKRwm/xPc/b/xsYQ3i4U59vyZdVTQt86uQueJM8lCzf9O5aMkhVZv6wdnmc4zStVzAbPSoL8qHNts/OZQmKGdx0MgrJLltGZey1zNTk6iQ6o1szT3i9x126kRvuDT+476+LB0YTKrsT/twNC4/fJKl614QioDtTpJ/dxj1R4tp6fmizyMZ8Oh8r+LdVet/wGai8LVg6LGVSUYWF5iHZlDGKbslZf3O5pgHvD3wwyKXaPGh8nYVebFlHzyrTDGA++MezXNDxx2lPO5MdB18ZAZD/s6/i4MPs6EnoNGfk+NF1xTPRkLOhFxX9IlhTBntNUfQWSBeabTpaMaLqfJjm3p3qlYb4qD+jFsiJ5g4ZdkNmheQXRbqudnv3llgwF5vr4XiksY3LD06fCExMSo9kSM=
