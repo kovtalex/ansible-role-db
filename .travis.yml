@@ -4,12 +4,12 @@ python:
 install:
 - pip install ansible==2.8.6 molecule[gce] apache-libcloud
 script:
-- molecule --debug create --scenario-name gce
-- molecule --debug converge --scenario-name gce
-- molecule --debug verify --scenario-name gce
-- molecule --debug test --scenario-name gce
+- molecule create --scenario-name gce
+- molecule converge --scenario-name gce
+- molecule verify --scenario-name gce
+- molecule test --scenario-name gce
 after_script:
-- molecule --debug destroy --scenario-name gce
+- molecule destroy --scenario-name gce
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
