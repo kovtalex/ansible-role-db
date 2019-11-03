@@ -1,7 +1,7 @@
 ansible-role-db
 =========
 
-[![Build Status](https://travis-ci.org/kovtalex/ansible-role-db.svg?branch=master)](https://travis-ci.org/kovtalex/ansible-role-db)
+[![Build Status](https://travis-ci.com/kovtalex/ansible-role-db.svg?branch=master)](https://travis-ci.com/kovtalex/ansible-role-db)
 
 Requirements
 ------------
