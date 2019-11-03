@@ -1,3 +1,4 @@
+---
 - name: Add APT key
   apt_key:
     id: "D68FA50FEA312927"
