@@ -24,4 +24,3 @@ notifications:
   slack:
     rooms:
       - devops-team-otus:1OhzpaDydQMkNxoK2AzHJwAI#alexey_kovtunovich
-
