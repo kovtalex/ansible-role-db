@@ -1,67 +1,29 @@
----
 language: python
 python:
-  - '3.6'
+- '3.6'
 install:
-  - pip install ansible==2.8.6 molecule[gce] apache-libcloud
+- pip install ansible==2.8.6 molecule[gce] apache-libcloud
 script:
-  - molecule create --scenario-name gce
-  - molecule converge --scenario-name gce
-  - molecule verify --scenario-name gce
-  - molecule test --scenario-name gce
+- molecule create --scenario-name gce
+- molecule converge --scenario-name gce
+- molecule verify --scenario-name gce
+- molecule test --scenario-name gce
 after_script:
-  - molecule destroy --scenario-name gce
+- molecule destroy --scenario-name gce
 env:
   matrix:
-    - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
+  - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
   global:
-    - secure: OiSLhYuU7d9DQlXNDSAU7Emw1/RD95IZ5Ztw+EDVBwgZeF+ZMCTVePMMtaQHqiraC4
-        J7bztXziA1MOEiIoyUhq1yZqqQWDr6/VVSkQJs1aE8RqSExPc71p0TY0u/mXHiZERiYWemBv
-        D1msZ8mqi7DOthXsaH2K27IqN3RHSI6A2lgxVYkL6VfvBirTebjEFV3qOZolOZHTdBBdN0kz
-        C40vS8dxQUwxg29J6JiUfPA0yjZuD0gqPQq+S0RJNaVTkWI7TlTcMjevSB0KyW4x3NahA1sq
-        HYzTmFA17a0jqM2Jek5vt0aA8dXCuKarXZCnJX1mNTLf1N0ab+tphtbAEJmfEXfojfgdFI7g
-        eNvZbVwGbeOKqLBssUUy0QrWVbic69Eu90Kh0bOERVPnGuGlNuqhFjjfb83jPj49LoKZYYCz
-        KQapTpprvRpYZ+ebpilkhVsn4SDfa+lLlwKriWq0+7XJgOXPwkD3yBZvKRvEBBptGTKcGnZx
-        X6MO+SMuQsL/NzFe7AK5fhwc5kj5K/97ysEx6iLwRrvnhm9GbRpI7dBaN034SK7VCY0YU0Zk
-        bxKzw/ff3ekUNS8VCzIgtB4x+kqGEIMLMotG9fSB+gRsHG5imp4bsIOysV28ABmyLlZM9iPA
-        vKEIuwQ7Sz6RzmYg8EJ4Oum+CkghP/UQSWfx+P/GM=
-    - secure: 2t3x6AvHuESWvrrBmpvlWN+Bh21q/vagYTFkMclUpsbrOJXRGE501O9Av5NE/avJnP
-        5pSt0QqqndB6/AhjfkZP8gchv8Wj4h9jKQeJkEGxXI+4v8LogsmBpnrji3ufpV5faSESBz+4
-        9115LaLd3HRT+ctzWdINEx3YfK65tBUDe0NQHEzCWSo6xXF+s1/wlflXFZFTfeELUUQoSwHE
-        whGsCurGWimwfSEmHOcmZ4EcThgceDL3Qw5wFnlziutd46F0k5oHy1C+ZBMO1oUCaGFzztO9
-        /wcEmUGJv7j3LgDz6HBzWX2ypBSj37MaKlkYHzG9iuDsHMvxkB4S26THQH3jYaRSCwcykKcb
-        mJf6uKXAgZT6Ei6msFa9/4dGApZm0uZm+gqcmnYC4HmNDvJAcpPx6z9Ca8EYC3FplVqHI4ED
-        DYjz5d9wnIbPFbExzN3p7yOaTqRL4pMcp4cpp3bLffO3pJYloPuhFDDJvsDSeHCWCwbmzEaM
-        L0FYSVMB1XiX6yz6dBsiGJ0kZgj6BFG9zJUPZn3QJEZrHo5zmmcirvtSNCEgR/HR8RN82stB
-        tsvpvXehwoQIlueRATdEvS3vd0OVY99YujPsRMZsBGwi1wOXY2nd5Q0tAIUHQxAByG2eoeMn
-        2+IXJ7uR8UW5NroDVAEiUgARSlrAVzNa9ByK3vyRM=
-    - secure: 3qCCcUsSu7mySPg1jgE7CuXaUic9cXL6sEgFqmTZui9qjYmzdKj6eVJCCX5dQNV4xD
-        nFMJYXEHg7uaYyPzuFSVg6pEEcE8aOIUIrHxawMq/lZM0AYoudqV2uAIrTDNQ29Xag5SHpx4
-        okkQaCp3kXAFZGhQZkSwBbA61dyUzCdpaCaxTVgpnBZGUGjn+BvB4UcAnyObbch59Y1hM6Iv
-        UCHtWIsmzwjSEEkW5E4EkZGW9YVBoXQVCrN8Ya29Ja/l6eImh7f40NZG+pQQW879I4ukomED
-        7mCkZCvWo0pr6OGJNR2hPj5vFpQd+dQHFJESpgpBUE5nd2/2QCAvl222Pd+jtPQAMKlX2GL9
-        M3SrdVS74saARvQcIoI9X9eJzEb+4SQ8z7ciX3H9SnmUKgqpaJ9ksaKHsSGWjY7wFj6zjFMY
-        wUBZPrWrAgmWyCAJeieoVIFaSd2crVcn3stvG7NII0RbA4LeoB8NAwKR8VNoLC6NPrd441e3
-        dTUB5wHYggOaGVMgGe9LhBzQpdn+pUF78hzoB26gDDfAlUNCc0ZEmNxK0r9+w2BKICtKykuY
-        QkDt6GnqATUk+ZUnJU4fEiJwV0bmr4yt8PGMv9DP1pjS+/rwlur/EAoTDqqYgpx5RYmMMu7s
-        CcMrfpj8uiSsDGTjYLc4QtSvZx+p3RMi3t00VwDz4=
+    - secure: OiSLhYuU7d9DQlXNDSAU7Emw1/RD95IZ5Ztw+EDVBwgZeF+ZMCTVePMMtaQHqiraC4J7bztXziA1MOEiIoyUhq1yZqqQWDr6/VVSkQJs1aE8RqSExPc71p0TY0u/mXHiZERiYWemBvD1msZ8mqi7DOthXsaH2K27IqN3RHSI6A2lgxVYkL6VfvBirTebjEFV3qOZolOZHTdBBdN0kzC40vS8dxQUwxg29J6JiUfPA0yjZuD0gqPQq+S0RJNaVTkWI7TlTcMjevSB0KyW4x3NahA1sqHYzTmFA17a0jqM2Jek5vt0aA8dXCuKarXZCnJX1mNTLf1N0ab+tphtbAEJmfEXfojfgdFI7geNvZbVwGbeOKqLBssUUy0QrWVbic69Eu90Kh0bOERVPnGuGlNuqhFjjfb83jPj49LoKZYYCzKQapTpprvRpYZ+ebpilkhVsn4SDfa+lLlwKriWq0+7XJgOXPwkD3yBZvKRvEBBptGTKcGnZxX6MO+SMuQsL/NzFe7AK5fhwc5kj5K/97ysEx6iLwRrvnhm9GbRpI7dBaN034SK7VCY0YU0ZkbxKzw/ff3ekUNS8VCzIgtB4x+kqGEIMLMotG9fSB+gRsHG5imp4bsIOysV28ABmyLlZM9iPAvKEIuwQ7Sz6RzmYg8EJ4Oum+CkghP/UQSWfx+P/GM=
+    - secure: 2t3x6AvHuESWvrrBmpvlWN+Bh21q/vagYTFkMclUpsbrOJXRGE501O9Av5NE/avJnP5pSt0QqqndB6/AhjfkZP8gchv8Wj4h9jKQeJkEGxXI+4v8LogsmBpnrji3ufpV5faSESBz+49115LaLd3HRT+ctzWdINEx3YfK65tBUDe0NQHEzCWSo6xXF+s1/wlflXFZFTfeELUUQoSwHEwhGsCurGWimwfSEmHOcmZ4EcThgceDL3Qw5wFnlziutd46F0k5oHy1C+ZBMO1oUCaGFzztO9/wcEmUGJv7j3LgDz6HBzWX2ypBSj37MaKlkYHzG9iuDsHMvxkB4S26THQH3jYaRSCwcykKcbmJf6uKXAgZT6Ei6msFa9/4dGApZm0uZm+gqcmnYC4HmNDvJAcpPx6z9Ca8EYC3FplVqHI4EDDYjz5d9wnIbPFbExzN3p7yOaTqRL4pMcp4cpp3bLffO3pJYloPuhFDDJvsDSeHCWCwbmzEaML0FYSVMB1XiX6yz6dBsiGJ0kZgj6BFG9zJUPZn3QJEZrHo5zmmcirvtSNCEgR/HR8RN82stBtsvpvXehwoQIlueRATdEvS3vd0OVY99YujPsRMZsBGwi1wOXY2nd5Q0tAIUHQxAByG2eoeMn2+IXJ7uR8UW5NroDVAEiUgARSlrAVzNa9ByK3vyRM=
+    - secure: 3qCCcUsSu7mySPg1jgE7CuXaUic9cXL6sEgFqmTZui9qjYmzdKj6eVJCCX5dQNV4xDnFMJYXEHg7uaYyPzuFSVg6pEEcE8aOIUIrHxawMq/lZM0AYoudqV2uAIrTDNQ29Xag5SHpx4okkQaCp3kXAFZGhQZkSwBbA61dyUzCdpaCaxTVgpnBZGUGjn+BvB4UcAnyObbch59Y1hM6IvUCHtWIsmzwjSEEkW5E4EkZGW9YVBoXQVCrN8Ya29Ja/l6eImh7f40NZG+pQQW879I4ukomED7mCkZCvWo0pr6OGJNR2hPj5vFpQd+dQHFJESpgpBUE5nd2/2QCAvl222Pd+jtPQAMKlX2GL9M3SrdVS74saARvQcIoI9X9eJzEb+4SQ8z7ciX3H9SnmUKgqpaJ9ksaKHsSGWjY7wFj6zjFMYwUBZPrWrAgmWyCAJeieoVIFaSd2crVcn3stvG7NII0RbA4LeoB8NAwKR8VNoLC6NPrd441e3dTUB5wHYggOaGVMgGe9LhBzQpdn+pUF78hzoB26gDDfAlUNCc0ZEmNxK0r9+w2BKICtKykuYQkDt6GnqATUk+ZUnJU4fEiJwV0bmr4yt8PGMv9DP1pjS+/rwlur/EAoTDqqYgpx5RYmMMu7sCcMrfpj8uiSsDGTjYLc4QtSvZx+p3RMi3t00VwDz4=
 before_install:
-  - openssl aes-256-cbc -K $encrypted_b1f6b1eff77e_key -iv
-    $encrypted_b1f6b1eff77e_iv
-    -in secrets.tar.enc -out secrets.tar -d
-  - tar xvf secrets.tar
-  - mv google_compute_engine /home/travis/.ssh/
-  - chmod 0600 /home/travis/.ssh/google_compute_engine
+- openssl aes-256-cbc -K $encrypted_b1f6b1eff77e_key -iv $encrypted_b1f6b1eff77e_iv
+  -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- mv google_compute_engine /home/travis/.ssh/
+- chmod 0600 /home/travis/.ssh/google_compute_engine
 notifications:
   slack:
     rooms:
-      secure: jpXXVcYXh85mUhdgA8QdN3fX3WzkCsDnp6ZyUEH6oO/F4MOTyrCgrIHA0DmYqrk5Q9
-        xf6M/qSTpaCUUFsEbI66dYZNWFtiv6e20JvK4czj/cMgYrxfxzwORDDHI0XN64n3e21pnRGJ
-        tCrx0kG5twwRENUmIIuUvDiF/DB45V1AtkZ+31fifk6L3GSM2nrk1pUT5WL/2BUKX6qVdpCn
-        D4OJplVg4e1vlU7bvK5tP/kNK6KSBgtnjhvqY8S3vOrYKEeU2wUJChzxlT25Eul3ryCjQKRw
-        m/xPc/b/xsYQ3i4U59vyZdVTQt86uQueJM8lCzf9O5aMkhVZv6wdnmc4zStVzAbPSoL8qHNt
-        s/OZQmKGdx0MgrJLltGZey1zNTk6iQ6o1szT3i9x126kRvuDT+476+LB0YTKrsT/twNC4/fJ
-        Kl614QioDtTpJ/dxj1R4tp6fmizyMZ8Oh8r+LdVet/wGai8LVg6LGVSUYWF5iHZlDGKbslZf
-        3O5pgHvD3wwyKXaPGh8nYVebFlHzyrTDGA++MezXNDxx2lPO5MdB18ZAZD/s6/i4MPs6EnoN
-        Gfk+NF1xTPRkLOhFxX9IlhTBntNUfQWSBeabTpaMaLqfJjm3p3qlYb4qD+jFsiJ5g4ZdkNmh
-        eQXRbqudnv3llgwF5vr4XiksY3LD06fCExMSo9kSM=
+      secure: REx5U/4XsuZSfp/RbzwKGM29OWhqinZxmozVHNvrqDtZy6b96+1/S2OKf4IolttdOVPZv8/y7G9/LCEUI6AY7+0fvJ7YPTj+kv/DSJ8+yw5096gDVDBAxu/NwtyPsra5/4vxKwFScRPcUsSsKEcunCmb1TlzL3LaOR5Z4GYHHVox8XcY6GZkTW11mQxQ1JEIymM/byyG4Yov0OznaI72M2rzIzG+mXSIrvG3ASQ10bjaoKJV6pvX0V5Saor8CwI0wViD0F8ZarIhufS9TgaUEZrybdO07xBDZXQ61x68mcWm71m7tDHK3id18pA6Yxc20FqD5YdIxrcDzjAcnCUMnxFPlbw9AZMPjKhP2UILXu7/Y6FFoC5S0ZuuwqeFoYoAgvn6BPqaBU7wFC/U2warGLZ5AMwXQh58TpS58Pgn0zG3MrqOtmE8UCPlgz6gV5RBUC++RtxZWcQArGfFWENA5NKc8dP4iZ062ieC+pE1CAK8eDfnDC5xsOJ2YKiyMX4tye0CVHHdBNNeggeiYz7kxbSuoAuIpEQ7nml+vYMiMfSfii8njZvvU7DTzAvbHbR+hPkc1o+spp0uEI7jm4eHWLkNdgaJggHfAX+Q7o/9bnMsj3ybrBFhwCCN901Iyx9p4q8S7dSKwNB3OrL1Bk58f3E8bM97YgU6OYiVHake4io=
