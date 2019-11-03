@@ -56,12 +56,12 @@ notifications:
   slack:
     rooms:
       secure: jpXXVcYXh85mUhdgA8QdN3fX3WzkCsDnp6ZyUEH6oO/F4MOTyrCgrIHA0DmYqrk5Q9
-      xf6M/qSTpaCUUFsEbI66dYZNWFtiv6e20JvK4czj/cMgYrxfxzwORDDHI0XN64n3e21pnRGJtC
-      rx0kG5twwRENUmIIuUvDiF/DB45V1AtkZ+31fifk6L3GSM2nrk1pUT5WL/2BUKX6qVdpCnD4OJ
-      plVg4e1vlU7bvK5tP/kNK6KSBgtnjhvqY8S3vOrYKEeU2wUJChzxlT25Eul3ryCjQKRwm/xPc/
-      b/xsYQ3i4U59vyZdVTQt86uQueJM8lCzf9O5aMkhVZv6wdnmc4zStVzAbPSoL8qHNts/OZQmKG
-      dx0MgrJLltGZey1zNTk6iQ6o1szT3i9x126kRvuDT+476+LB0YTKrsT/twNC4/fJKl614QioDt
-      TpJ/dxj1R4tp6fmizyMZ8Oh8r+LdVet/wGai8LVg6LGVSUYWF5iHZlDGKbslZf3O5pgHvD3wwy
-      KXaPGh8nYVebFlHzyrTDGA++MezXNDxx2lPO5MdB18ZAZD/s6/i4MPs6EnoNGfk+NF1xTPRkLO
-      hFxX9IlhTBntNUfQWSBeabTpaMaLqfJjm3p3qlYb4qD+jFsiJ5g4ZdkNmheQXRbqudnv3llgwF
-      5vr4XiksY3LD06fCExMSo9kSM=
+        xf6M/qSTpaCUUFsEbI66dYZNWFtiv6e20JvK4czj/cMgYrxfxzwORDDHI0XN64n3e21pnRGJ
+        tCrx0kG5twwRENUmIIuUvDiF/DB45V1AtkZ+31fifk6L3GSM2nrk1pUT5WL/2BUKX6qVdpCn
+        D4OJplVg4e1vlU7bvK5tP/kNK6KSBgtnjhvqY8S3vOrYKEeU2wUJChzxlT25Eul3ryCjQKRw
+        m/xPc/b/xsYQ3i4U59vyZdVTQt86uQueJM8lCzf9O5aMkhVZv6wdnmc4zStVzAbPSoL8qHNt
+        s/OZQmKGdx0MgrJLltGZey1zNTk6iQ6o1szT3i9x126kRvuDT+476+LB0YTKrsT/twNC4/fJ
+        Kl614QioDtTpJ/dxj1R4tp6fmizyMZ8Oh8r+LdVet/wGai8LVg6LGVSUYWF5iHZlDGKbslZf
+        3O5pgHvD3wwyKXaPGh8nYVebFlHzyrTDGA++MezXNDxx2lPO5MdB18ZAZD/s6/i4MPs6EnoN
+        Gfk+NF1xTPRkLOhFxX9IlhTBntNUfQWSBeabTpaMaLqfJjm3p3qlYb4qD+jFsiJ5g4ZdkNmh
+        eQXRbqudnv3llgwF5vr4XiksY3LD06fCExMSo9kSM=
