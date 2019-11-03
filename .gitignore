@@ -1,5 +1,6 @@
 *.log
 *.tar
 *.pub
+*.bak
 credentials.json
 google_compute_engine
